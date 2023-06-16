@@ -59,6 +59,7 @@ p {
   font-size: 0.875rem;
   display: inline-block;
   transition: all 0.3s linear;
+  color: #000;
 }
 .filter-btn:hover {
   color: white;
@@ -94,7 +95,7 @@ p {
 }
 
 .menu-container {
-  /* width: 90vw; */
+  /* width: 70%; */
   margin: 0 auto;
   max-width: 1170px;
   display: grid;
@@ -103,8 +104,9 @@ p {
 }
 .menu-item {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem 2rem;
-  max-width: 25rem;
+  /* max-width: 25rem; */
 }
 
 .photo {
@@ -130,7 +132,7 @@ p {
   margin-bottom: 0;
   padding-top: 1rem;
 }
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu-item {
     grid-template-columns: 225px 1fr;
     gap: 0 1.25rem;
@@ -143,7 +145,7 @@ p {
 
 @media screen and (min-width: 1200px) {
   .menu-container {
-    width: 95vw;
+    width: 90%;
     grid-template-columns: 1fr;
   }
   .photo {
@@ -153,7 +155,7 @@ p {
   p {
     margin-bottom: 2rem;
   }
-} */
+}
 @media screen and (max-width: 800px) {
   h2 {
     font-size: 2.5rem;
@@ -167,6 +169,17 @@ p {
   }
 }
 
+@media screen and (max-width: 768px) and (min-width: 468px) {
+  .menu-container {
+    width: 80%;
+  }
+  .menu-item {
+    grid-template-columns: 1fr;
+  }
+  .photo {
+    height: 250px;
+  }
+}
 @media screen and (max-width: 468px) {
   .filter-btn {
     font-size: 16px;
@@ -180,5 +193,9 @@ p {
   }
   .menu {
     padding: 5%;
+  }
+  .menu-item {
+    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
